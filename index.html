@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cuota de Crédito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+  
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Cuota de Crédito</h1>
+    <label for="monto">Monto del Préstamo:</label>
+    <input type="number" id="monto" placeholder="Ingrese monto del préstamo" step="0.01">
+    <br>
+    
+    <label for="tasa">Tasa de Interés Anual (%):</label>
+    <input type="number" id="tasa" placeholder="Ingrese tasa de interés anual" step="0.01">
+     <br>
+    <label for="meses">Número de Meses:</label>
+    <input type="number" id="meses" placeholder="Ingrese número de meses" step="1">
+     <br>
+   
+     <input type="checkbox" id="intereses" value="si" />
+     <label for="valordeintereses">Calcular valor de intereses</label>
+    
+     <br>
+    <button onclick="calcularCuota()">Calcular Cuota Mensual</button>
+    
+    <h3 id="resultado">Cuota Mensual: </h3>
+    
+    <h3 id="valorintereses">Valor Intereses: </h3>
+    
+    <script src="main.js"></script>
+</body>
+</html>
