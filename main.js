@@ -38,7 +38,7 @@ function genera_plan(capital,intereses,valor,cuotas) {
 
   tabla.appendChild(tblBody);
   body.appendChild(tabla);
-  tabla.setAttribute("border", "2");
+  tabla.setAttribute("id", "planpagos");
 }
 
 
@@ -50,7 +50,15 @@ function calcularCuota() {
     const tasaAnual = parseFloat(document.getElementById('tasa').value);
     const meses = parseInt(document.getElementById('meses').value);
     const Imprimirplan = (document.getElementById('intereses').checked);  
-
+    
+    
+    const element = document.getElementById("planpagos");
+     if(element===null){
+    
+}else
+{
+  element.remove();
+}
      if(  (validarNumero(monto,'monto del préstamo' ))  ||  (validarNumero(tasaAnual,'Tasa Anual' )) || (validarNumero(meses,'Meses' )))
       {
        return; 
