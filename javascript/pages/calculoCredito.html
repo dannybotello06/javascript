@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cuota de Crédito</title>
+    <link rel="stylesheet" href="../css/style.css">  
+</head>
+<body>
+    <div class="container">
+    <div class="result" >
+        <h2>Cliente</h2>
+        <p id="nombre"></p>
+        <p id="identificacion"></p>
+        <p id="celular"></p>
+        <p id="direccion"></p>
+        <p id="correo"></p>
+    </div>
+      
+
+
+        <form id="simulatorForm">
+            <div class="form-group">
+                <label for="monto">Monto del Crédito (en $):</label>
+                <input type="number" id="monto" name="monto" required>
+            </div>
+            <div class="form-group">
+                <label for="tasa">Tasa de Interés Anual (%):</label>
+                <input type="number" id="tasa" name="tasa" required>
+            </div>
+            <div class="form-group">
+                <label for="meses">Plazo (en Meses):</label>
+                <input type="number" id="meses" name="meses" required>
+            </div>
+
+            <div class="form-group">
+            <input type="checkbox" id="intereses" value="si" />
+            <label for="valordeintereses">Imprimir plan de pagos</label>
+        </div>
+
+            <input type="submit" value="Calcular">
+
+       
+        </form>
+
+    <div class="container">
+
+        <div class="result" id="result" style="display: none;">
+            <h2>Resultado</h2>
+            <p id="resultText"></p>
+            <p id="valorintereses"></p>
+
+           
+        </div>
+
+       
+    </div>
+
+    <table id="tablaplandepagos" style="display: none;">
+        <thead>
+            <tr>
+                <th>Número de Cuota</th>
+                <th>Capital ($)</th>
+                <th>Intereses ($)</th>
+                <th>Valor de la cuota ($)</th>
+            </tr>
+        </thead>
+        <tbody id="tablaplandepagosbody"></tbody>
+    </table>
+
+    
+
+    
+    <script src="../js/main.js"></script>
+</body>
+</html>
